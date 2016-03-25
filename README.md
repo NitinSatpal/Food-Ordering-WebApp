@@ -7,7 +7,22 @@ Download mongodb from here : https://www.mongodb.org/ and install.
 You can install mongodb anywhere and not necessarily in the same folder where nodejs was installed. 
 Once installed, create a directory named "data" in the folder where mongodb is installed and then create the directory "db" isnide "data" directory.
 
-Open git bash and navigate to the directory where code is pulled on your local machine Install the following dependencies
+Open git bash and navigate to the "bin" directory of mongodb and type "mongod".
+You should see lot's of things but most important will be the last line saying "waiting for connections on port 27017".
+Mongodb runs on port 27017.
+
+Open another gitbash and again navigate to the "bin" directory for mongodb and type "mongo".
+You should see the message "MongoDB shell version: 3.2.4".
+Version number can be different depending on which version of mongodb you had installed. Latest is good.
+
+By default it will connect to "test" database.
+Type the following :
+- use hotspice //This will create a new database named hotspice
+- db.createCollection("category", {}); //This will create collection named "category"
+- db.createCollection("dish",{}); //This will create collection named "dish"
+- db.createCollection("orders",{}); //This will create collection named "orders"
+
+Open another git bash and navigate to the directory where code is pulled on your local machine and Intall the following dependencies
 
 - npm install mongojs
 - npm install body-parser
